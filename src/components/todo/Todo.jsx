@@ -26,7 +26,7 @@ function Todo({ todo }) {
           삭제하기
         </Btn_delete>
         <Btn_complete onClick={() => dispatch(updateTodo(todo.id))}>
-          {todo.isDone ? "취소" : "완료"}
+          {todo.Done ? "취소" : "완료"}
         </Btn_complete>
       </Btnset>
     </TodoContainer>
