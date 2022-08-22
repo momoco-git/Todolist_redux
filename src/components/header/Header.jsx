@@ -13,7 +13,7 @@ export default Header;
 
 const Header_bar = styled.div`
   align-items: center;
-  border: 1px solid #ddd;
+  
   display: flex;
   height: 50px;
   justify-content: space-between;

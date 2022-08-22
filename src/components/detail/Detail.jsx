@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Detail = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const param = useParams();
   const todo = useSelector((state) => state.todo);
 
@@ -19,7 +19,7 @@ const Detail = () => {
           <p>id : {thistodo[0].id}</p>
           <button
             onClick={() => {
-              history.goBack();
+              navigate(-1);
             }}
           >
             뒤로가기

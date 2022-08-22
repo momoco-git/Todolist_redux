@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const NotFound = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <Wrap>
@@ -14,7 +14,7 @@ const NotFound = () => {
           <p>페이지 경로가 잘못되었습니다</p>
           <button
             onClick={() => {
-              history.goBack();
+              navigate(-1);
             }}
           >
             뒤로가기

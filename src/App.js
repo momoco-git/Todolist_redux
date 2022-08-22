@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Detail from "./components/detail/Detail";
 import Layout from "./components/layout/Layout";
@@ -7,19 +7,15 @@ import NotFound from "./components/notfound/NotFound";
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route path={"/"} exact>
+      <Routes>
+        <Route path={"/"} element={
           <Layout>
             <TodoList></TodoList>
           </Layout>
-        </Route>
-        <Route path={"/detail/:id"}>
-          <Detail></Detail>
-        </Route>
-        <Route>
-          <NotFound></NotFound>
-        </Route>
-      </Switch>
+        }/>
+        <Route path={"/detail/:id"} element={<Detail/>}/>
+        <Route element ={<NotFound/>}/>
+      </Routes>
     </div>
   );
 }

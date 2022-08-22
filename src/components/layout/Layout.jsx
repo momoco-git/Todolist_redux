@@ -10,6 +10,6 @@ export default Layout;
 const Layoutline = styled.div`
   max-width: 1200px;
   min-width: 800px;
-  border: 3px solid black;
+ 
   margin: auto;
 `;

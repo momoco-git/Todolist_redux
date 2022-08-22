@@ -3,17 +3,17 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteTodo, updateTodo } from "../../redux/modules/todo";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 
 function Todo({ todo }) {
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   return (
     <TodoContainer>
       <div>
         <Detailgo
           onClick={() => {
-            history.push("/detail/" + todo.id);
+            navigate("/detail/" + todo.id);
           }}
         >
           자세히 보기
