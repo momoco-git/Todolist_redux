@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { createTodo } from "../../redux/modules/todo";
+import { createTodo } from "../../redux/modules/todoSlice";
 import { useDispatch } from "react-redux";
 let number = 3;
 const Form = (props) => {

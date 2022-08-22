@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import { deleteTodo, updateTodo } from "../../redux/modules/todo";
+import { deleteTodo, updateTodo } from "../../redux/modules/todoSlice";
 import styled from "styled-components";
 import {useNavigate } from "react-router-dom";
 
